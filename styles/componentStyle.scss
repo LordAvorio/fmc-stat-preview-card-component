@@ -1,0 +1,143 @@
+@import './main.scss';
+
+
+@mixin card-property {
+    background-color: $dark_blue_2;
+    border-radius: 10px;
+}
+
+p{
+    margin: 0px !important;
+}
+
+body {
+    background-color: $dark_blue;
+    font-size: 15px;
+    color: $white;
+}
+
+.container {
+    margin: 60px 10px;
+}
+
+.card {
+    @include card-property();
+    display: flex;
+    flex-flow : column wrap;
+}
+
+.card-container-1 {
+    height: 200px;
+    border-radius: 10px 10px 0px 0px;
+    background: url('../images/image-header-mobile.jpg') $violet;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+.purple-layer{
+    background-color: $violet;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.card-container-2 {
+    display: flex;
+    padding: 25px 20px;
+    flex-flow: column wrap;
+}
+
+.title-1 {
+    font-family: $font_lexend_deca;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.title-1 span{
+    color: $violet;
+}
+
+.paragraph {
+    font-family: $font_inter;
+    color: $white_2;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 25px;
+}
+
+.para-top {
+    margin: 20px 0px !important;
+}
+
+.infoContainer {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.itemInfo {
+    margin: 25px 0px;
+}
+
+.titleInfo{
+    font-size: 20px;
+}
+
+.paraInfo{
+    font-size: 13px;
+}
+
+@media only screen and (min-width: 1440px){
+
+    .container{
+        margin: 60px 40px;
+    }
+
+    .card {
+        flex-flow : row-reverse nowrap;
+    }
+
+    .card-container-1{
+        width: 50%;
+        height: auto;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .card-container-2{
+        width: 50%;
+        padding: 40px 100px;
+    }
+
+    .title-1 {
+        text-align: left;
+        font-size: 45px;
+    }
+
+    .paragraph {
+        text-align: left;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .para-top {
+        margin-bottom: 55px !important;
+    }
+
+    .infoContainer{
+        flex-flow: row wrap;
+    }
+
+    .itemInfo{
+        flex-grow: 1;
+    }
+
+    .titleInfo{
+        font-size: 30px;
+    }
+
+
+
+}
